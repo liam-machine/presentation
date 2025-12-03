@@ -28,3 +28,25 @@ sympy==1.14.0
 typing_extensions==4.15.0
 urllib3==2.5.0
 xlsxwriter==3.2.9
+
+# ============================================================================
+# EXTERNAL SYSTEM DEPENDENCIES (NOT Python packages)
+# ============================================================================
+# These tools must be installed separately on your system.
+#
+# Required for thumbnail.py:
+#
+# 1. LibreOffice (provides 'soffice' command for PPTX → PDF conversion)
+#    - Windows: https://www.libreoffice.org/download/download/
+#    - Linux: sudo apt-get install libreoffice
+#    - macOS: brew install --cask libreoffice
+#
+# 2. Poppler (provides 'pdftoppm' command for PDF → image conversion)
+#    - Windows: https://github.com/oschwartz10612/poppler-windows/releases
+#              Extract to C:\Program Files\poppler\Library\bin and add to PATH
+#    - Linux: sudo apt-get install poppler-utils
+#    - macOS: brew install poppler
+#
+# Verify installation:
+#   soffice --version
+#   pdftoppm -v

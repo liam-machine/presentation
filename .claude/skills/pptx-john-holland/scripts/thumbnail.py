@@ -41,6 +41,7 @@ Examples:
 """
 
 import argparse
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -62,6 +63,35 @@ GRID_PADDING = 20  # Padding between thumbnails
 BORDER_WIDTH = 2  # Border width around thumbnails
 FONT_SIZE_RATIO = 0.12  # Font size as fraction of thumbnail width
 LABEL_PADDING_RATIO = 0.4  # Label padding as fraction of font size
+
+
+def check_external_tools():
+    """Check if required external tools are available.
+
+    Returns:
+        tuple: (bool success, list error_messages)
+    """
+    errors = []
+
+    # Check for soffice (LibreOffice)
+    if not shutil.which("soffice"):
+        errors.append(
+            "LibreOffice not found. Required for PPTX → PDF conversion.\n"
+            "  Windows: Download from https://www.libreoffice.org/download/\n"
+            "  Linux: sudo apt-get install libreoffice\n"
+            "  macOS: brew install --cask libreoffice"
+        )
+
+    # Check for pdftoppm (Poppler)
+    if not shutil.which("pdftoppm"):
+        errors.append(
+            "Poppler not found. Required for PDF → image conversion.\n"
+            "  Windows: https://github.com/oschwartz10612/poppler-windows/releases\n"
+            "  Linux: sudo apt-get install poppler-utils\n"
+            "  macOS: brew install poppler"
+        )
+
+    return (len(errors) == 0, errors)
 
 
 def main():
@@ -196,6 +226,12 @@ def get_placeholder_regions(pptx_path):
 
 def convert_to_images(pptx_path, temp_dir, dpi):
     """Convert PowerPoint to images via PDF, handling hidden slides."""
+    # Check for required external tools FIRST
+    tools_ok, tool_errors = check_external_tools()
+    if not tools_ok:
+        error_msg = "Missing required external tools:\n\n" + "\n\n".join(tool_errors)
+        raise RuntimeError(error_msg)
+
     # Detect hidden slides
     print("Analyzing presentation...")
     prs = Presentation(str(pptx_path))
@@ -216,31 +252,55 @@ def convert_to_images(pptx_path, temp_dir, dpi):
 
     # Convert to PDF
     print("Converting to PDF...")
-    result = subprocess.run(
-        [
-            "soffice",
-            "--headless",
-            "--convert-to",
-            "pdf",
-            "--outdir",
-            str(temp_dir),
-            str(pptx_path),
-        ],
-        capture_output=True,
-        text=True,
-    )
-    if result.returncode != 0 or not pdf_path.exists():
-        raise RuntimeError("PDF conversion failed")
+    try:
+        result = subprocess.run(
+            [
+                "soffice",
+                "--headless",
+                "--convert-to",
+                "pdf",
+                "--outdir",
+                str(temp_dir),
+                str(pptx_path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        if result.returncode != 0 or not pdf_path.exists():
+            raise RuntimeError(
+                f"PDF conversion failed.\n"
+                f"Return code: {result.returncode}\n"
+                f"Stdout: {result.stdout}\n"
+                f"Stderr: {result.stderr}"
+            )
+    except FileNotFoundError:
+        raise RuntimeError(
+            "LibreOffice 'soffice' command not found. "
+            "See DEPENDENCIES.md for installation instructions."
+        )
 
     # Convert PDF to images
     print(f"Converting to images at {dpi} DPI...")
-    result = subprocess.run(
-        ["pdftoppm", "-jpeg", "-r", str(dpi), str(pdf_path), str(temp_dir / "slide")],
-        capture_output=True,
-        text=True,
-    )
-    if result.returncode != 0:
-        raise RuntimeError("Image conversion failed")
+    try:
+        result = subprocess.run(
+            ["pdftoppm", "-jpeg", "-r", str(dpi), str(pdf_path), str(temp_dir / "slide")],
+            capture_output=True,
+            text=True,
+            timeout=120,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(
+                f"Image conversion failed.\n"
+                f"Return code: {result.returncode}\n"
+                f"Stdout: {result.stdout}\n"
+                f"Stderr: {result.stderr}"
+            )
+    except FileNotFoundError:
+        raise RuntimeError(
+            "Poppler 'pdftoppm' command not found. "
+            "See DEPENDENCIES.md for installation instructions."
+        )
 
     visible_images = sorted(temp_dir.glob("slide-*.jpg"))
 

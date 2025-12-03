@@ -8,7 +8,14 @@
       "Bash(node --version:*)",
       "Bash(npm --version:*)",
       "Bash(npm install:*)",
-      "Skill(pptx-john-holland)"
+      "Skill(pptx-john-holland)",
+      "Bash(node create-presentation.js:*)",
+      "Bash(dir:*)",
+      "Bash(copy:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(node -p:*)",
+      "Bash(node test-logo-fix.js:*)"
     ],
     "deny": []
   }
