@@ -1,0 +1,17 @@
+{
+  "name": "pptx-john-holland-presentation",
+  "version": "1.0.0",
+  "description": "PowerPoint presentation creation and editing with John Holland branding",
+  "private": true,
+  "dependencies": {
+    "playwright": "^1.57.0",
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
+    "sharp": "^0.34.5"
+  },
+  "scripts": {
+    "postinstall": "playwright install chromium"
+  }
+}
