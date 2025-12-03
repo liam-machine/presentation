@@ -15,7 +15,9 @@
       "Bash(python:*)",
       "Bash(pip install:*)",
       "Bash(node -p:*)",
-      "Bash(node test-logo-fix.js:*)"
+      "Bash(node test-logo-fix.js:*)",
+      "Bash(find:*)",
+      "Bash(cat:*)"
     ],
     "deny": []
   }
