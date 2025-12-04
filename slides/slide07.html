@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #F5F5F5; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F5F5; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; position: relative;
+}
+.logo { position: absolute; top: 15pt; right: 15pt; height: 25pt; }
+.content { flex: 1; padding: 30pt 35pt; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+h1 { color: #292929; font-size: 40pt; font-weight: bold; margin: 0 0 10pt 0; text-align: center; }
+.key-msg { color: #555555; font-size: 14pt; margin: 0 0 20pt 0; text-align: center; }
+.diagram { background: #FFFFFF; border: 2px solid #E0E0E0; border-radius: 8pt; padding: 20pt; margin-bottom: 15pt; }
+.flow { display: flex; align-items: center; justify-content: center; gap: 12pt; }
+.flow-box { background: #F8F8F8; border: 2px solid #EB1E32; border-radius: 6pt; padding: 15pt; text-align: center; min-width: 85pt; }
+.flow-icon { width: 32pt; height: 32pt; margin: 0 auto 6pt auto; display: block; }
+.flow-text { color: #292929; font-size: 12pt; font-weight: bold; margin: 0; }
+.flow-arrow { color: #EB1E32; font-size: 28pt; font-weight: bold; }
+.benefits { max-width: 500pt; }
+.benefits-title { color: #EB1E32; font-size: 16pt; font-weight: bold; margin: 0 0 10pt 0; }
+ul { margin: 0; padding-left: 25pt; }
+li { color: #555555; font-size: 12pt; margin-bottom: 6pt; }
+</style>
+</head>
+<body>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+<div class="content">
+  <h1>AI-Native Code Review</h1>
+  <p class="key-msg">Install and enable Claude App in GitHub organisation</p>
+
+  <div class="diagram">
+    <div class="flow">
+      <div class="flow-box">
+        <img src="../icons/GitPullRequest.png" class="flow-icon">
+        <p class="flow-text">Pull Request</p>
+      </div>
+      <p class="flow-arrow">→</p>
+      <div class="flow-box">
+        <img src="../icons/Bot.png" class="flow-icon">
+        <p class="flow-text">Claude Review</p>
+      </div>
+      <p class="flow-arrow">→</p>
+      <div class="flow-box">
+        <img src="../icons/CircleCheck.png" class="flow-icon">
+        <p class="flow-text">Improved Code</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="benefits">
+    <p class="benefits-title">Benefits:</p>
+    <ul>
+      <li>Automated PR reviews and suggestions</li>
+      <li>Security vulnerability detection</li>
+      <li>Documentation generation from code</li>
+      <li>Consistent code quality enforcement</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

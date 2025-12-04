@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #F5F5F5; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F5F5; font-family: Arial, sans-serif;
+  display: flex; position: relative;
+}
+.logo { position: absolute; top: 15pt; right: 15pt; height: 25pt; }
+.left-bar { width: 12pt; background: #EB1E32; flex-shrink: 0; }
+.content { flex: 1; padding: 25pt 30pt; display: flex; flex-direction: column; }
+h1 { color: #292929; font-size: 36pt; font-weight: bold; margin: 0 0 15pt 0; }
+.icon-header { display: flex; align-items: center; gap: 10pt; }
+.icon-large { width: 32pt; height: 32pt; }
+.columns { display: flex; gap: 15pt; flex: 1; }
+.col { flex: 1; display: flex; flex-direction: column; gap: 8pt; }
+.col-header { background: #EB1E32; color: #FFFFFF; padding: 8pt; border-radius: 4pt; text-align: center; font-size: 14pt; font-weight: bold; }
+.col-header-text { margin: 0; }
+.risk-item { background: #FFFFFF; border: 2px solid #E0E0E0; border-radius: 4pt; padding: 10pt; }
+.risk-title { color: #D01828; font-size: 11pt; font-weight: bold; margin: 0 0 4pt 0; }
+.mitigation-title { color: #2E7D32; font-size: 11pt; font-weight: bold; margin: 0 0 4pt 0; }
+.risk-text { color: #555555; font-size: 10pt; margin: 0; line-height: 1.3; }
+</style>
+</head>
+<body>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+<div class="left-bar"></div>
+<div class="content">
+  <div class="icon-header">
+    <img src="../icons/ShieldAlert.png" class="icon-large" style="filter: brightness(0) saturate(100%) invert(16%) sepia(94%) saturate(6937%) hue-rotate(352deg) brightness(91%) contrast(85%);">
+    <h1 style="margin: 0;">Risks and Controls</h1>
+  </div>
+
+  <div class="columns">
+    <div class="col">
+      <div class="col-header"><p class="col-header-text">Risks</p></div>
+      <div class="risk-item">
+        <p class="risk-title">Data exposure via AI tools</p>
+      </div>
+      <div class="risk-item">
+        <p class="risk-title">Shadow AI adoption</p>
+      </div>
+      <div class="risk-item">
+        <p class="risk-title">Skill gaps</p>
+      </div>
+      <div class="risk-item">
+        <p class="risk-title">Runaway experimentation</p>
+      </div>
+      <div class="risk-item">
+        <p class="risk-title">Strategic drift</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="col-header"><p class="col-header-text">Mitigations</p></div>
+      <div class="risk-item">
+        <p class="mitigation-title">MCP server access controls</p>
+        <p class="risk-text">No external data egress</p>
+      </div>
+      <div class="risk-item">
+        <p class="mitigation-title">Centralised enabler program</p>
+        <p class="risk-text">Creates sanctioned path</p>
+      </div>
+      <div class="risk-item">
+        <p class="mitigation-title">Community of practice</p>
+        <p class="risk-text">Builds capability organically</p>
+      </div>
+      <div class="risk-item">
+        <p class="mitigation-title">Architectural review gate</p>
+        <p class="risk-text">Before production deployment</p>
+      </div>
+      <div class="risk-item">
+        <p class="mitigation-title">6-monthly review cycle</p>
+        <p class="risk-text">With executive input</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
