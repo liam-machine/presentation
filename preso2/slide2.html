@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #EB1E32;
+  padding: 15pt;
+  margin: 0;
+}
+h1 {
+  color: #ffffff;
+  font-size: 28pt;
+  margin: 0;
+  font-weight: bold;
+}
+.content {
+  display: flex;
+  padding: 15pt;
+  gap: 15pt;
+  flex: 1;
+}
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-box {
+  text-align: center;
+  margin-bottom: 10pt;
+}
+h2 {
+  color: #55328C;
+  font-size: 20pt;
+  margin: 8pt 0;
+  text-align: center;
+  font-weight: bold;
+}
+.purple-header {
+  color: #55328C;
+}
+.red-header {
+  color: #EB1E32;
+}
+.pros-cons {
+  width: 100%;
+}
+h3 {
+  color: #6E6E6E;
+  font-size: 14pt;
+  margin: 8pt 0 4pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0 0 8pt 0;
+  padding-left: 18pt;
+}
+li {
+  color: #6E6E6E;
+  font-size: 11pt;
+  margin: 3pt 0;
+  line-height: 1.2;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Power Apps vs Databricks Apps</h1>
+</div>
+<div class="content">
+  <div class="column">
+    <div class="icon-box">
+      <img src="icon-powerapps.png" style="width: 50pt; height: 50pt;">
+      <h2 class="purple-header">Power Apps</h2>
+    </div>
+    <div class="pros-cons">
+      <h3>Pros</h3>
+      <ul>
+        <li>Low-code/no-code interface</li>
+        <li>Microsoft 365 integration</li>
+        <li>Rapid prototyping</li>
+        <li>Built-in connectors</li>
+      </ul>
+      <h3>Cons</h3>
+      <ul>
+        <li>Limited data volume handling</li>
+        <li>Licensing complexity</li>
+        <li>Performance issues with large datasets</li>
+        <li>Siloed from enterprise data lake</li>
+      </ul>
+    </div>
+  </div>
+  <div class="column">
+    <div class="icon-box">
+      <img src="icon-apps.png" style="width: 50pt; height: 50pt;">
+      <h2 class="red-header">Databricks Apps</h2>
+    </div>
+    <div class="pros-cons">
+      <h3>Pros</h3>
+      <ul>
+        <li>Direct access to data lake</li>
+        <li>Handles massive datasets</li>
+        <li>Python/SQL flexibility</li>
+        <li>Unified data governance</li>
+      </ul>
+      <h3>Cons</h3>
+      <ul>
+        <li>Requires technical skills</li>
+        <li>Longer initial development time</li>
+        <li>Steeper learning curve</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

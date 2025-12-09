@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: #55328C;
+  padding: 15pt;
+  margin: 0;
+}
+h1 {
+  color: #ffffff;
+  font-size: 28pt;
+  margin: 0;
+  font-weight: bold;
+}
+.content {
+  display: flex;
+  padding: 15pt;
+  gap: 15pt;
+  flex: 1;
+}
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-box {
+  text-align: center;
+  margin-bottom: 10pt;
+}
+h2 {
+  font-size: 20pt;
+  margin: 8pt 0;
+  text-align: center;
+  font-weight: bold;
+}
+.purple-header {
+  color: #55328C;
+}
+.red-header {
+  color: #EB1E32;
+}
+.pros-cons {
+  width: 100%;
+}
+h3 {
+  color: #6E6E6E;
+  font-size: 14pt;
+  margin: 8pt 0 4pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0 0 8pt 0;
+  padding-left: 18pt;
+}
+li {
+  color: #6E6E6E;
+  font-size: 11pt;
+  margin: 3pt 0;
+  line-height: 1.2;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Power Automate vs Databricks Jobs</h1>
+</div>
+<div class="content">
+  <div class="column">
+    <div class="icon-box">
+      <img src="icon-automate.png" style="width: 50pt; height: 50pt;">
+      <h2 class="purple-header">Power Automate</h2>
+    </div>
+    <div class="pros-cons">
+      <h3>Pros</h3>
+      <ul>
+        <li>Visual workflow builder</li>
+        <li>Pre-built templates</li>
+        <li>Microsoft ecosystem integration</li>
+        <li>Citizen developer friendly</li>
+      </ul>
+      <h3>Cons</h3>
+      <ul>
+        <li>Limited data transformation</li>
+        <li>Performance bottlenecks</li>
+        <li>Complex error handling</li>
+        <li>Execution time limits</li>
+      </ul>
+    </div>
+  </div>
+  <div class="column">
+    <div class="icon-box">
+      <img src="icon-jobs.png" style="width: 50pt; height: 50pt;">
+      <h2 class="red-header">Databricks Jobs</h2>
+    </div>
+    <div class="pros-cons">
+      <h3>Pros</h3>
+      <ul>
+        <li>Scalable parallel processing</li>
+        <li>Complex ETL pipelines</li>
+        <li>Advanced scheduling</li>
+        <li>Native data transformation</li>
+      </ul>
+      <h3>Cons</h3>
+      <ul>
+        <li>Code-based configuration</li>
+        <li>Requires data engineering skills</li>
+        <li>Higher initial complexity</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
