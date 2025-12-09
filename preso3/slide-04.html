@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; position: relative;
+}
+.logo {
+  position: absolute; bottom: 15pt; left: 20pt; width: 80pt; height: auto;
+}
+.header {
+  background: #EB1E32; padding: 20pt 40pt; display: flex; align-items: center;
+}
+.header-icon {
+  width: 40pt; height: 40pt; margin-right: 15pt;
+}
+h1 {
+  color: #FFFFFF; font-size: 30pt; font-weight: bold; margin: 0;
+}
+.content {
+  padding: 30pt 40pt; flex: 1; display: flex; gap: 30pt;
+}
+.column {
+  flex: 1;
+}
+.advantage-title {
+  color: #EB1E32; font-size: 20pt; font-weight: bold; margin-bottom: 15pt;
+  display: flex; align-items: center; gap: 10pt;
+}
+.advantage-icon {
+  width: 35pt; height: 35pt;
+}
+ul {
+  margin: 10pt 0 0 0; padding-left: 20pt;
+}
+li {
+  color: #2C3E50; font-size: 14pt; margin-bottom: 10pt; line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="brain-icon.png" class="header-icon">
+  <h1>Why Anthropic Claude?</h1>
+</div>
+<div class="content">
+  <div class="column">
+    <p class="advantage-title">
+      <img src="target-icon.png" class="advantage-icon">
+      <span>Superior Context Management</span>
+    </p>
+    <ul>
+      <li>Full context window utilization (no truncation)</li>
+      <li>Maintain conversation state across complex tasks</li>
+      <li>Understand entire codebases and documentation</li>
+    </ul>
+  </div>
+  <div class="column">
+    <p class="advantage-title">
+      <img src="robot-icon.png" class="advantage-icon">
+      <span>Advanced Agent Capabilities</span>
+    </p>
+    <ul>
+      <li>Claude Agents for autonomous task execution</li>
+      <li>Skills for specialized functions</li>
+      <li>Tool use and function calling</li>
+      <li>Multi-step reasoning with human checkpoints</li>
+    </ul>
+  </div>
+</div>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; position: relative;
+}
+.logo {
+  position: absolute; bottom: 15pt; left: 20pt; width: 80pt; height: auto;
+}
+.header {
+  background: #55328C; padding: 20pt 40pt;
+}
+h1 {
+  color: #FFFFFF; font-size: 30pt; font-weight: bold; margin: 0;
+}
+.subtitle {
+  color: #FFFFFF; font-size: 16pt; margin: 5pt 0 0 0;
+}
+.content {
+  padding: 20pt 30pt 30pt 30pt; flex: 1; display: flex; gap: 18pt;
+}
+.stage {
+  flex: 1; background: #F8F9FA; border-radius: 8pt; padding: 18pt;
+  border-top: 4pt solid #EB1E32;
+}
+.stage:nth-child(2) { border-top-color: #55328C; }
+.stage:nth-child(3) { border-top-color: #B4D2C3; }
+.stage-title {
+  color: #EB1E32; font-size: 15pt; font-weight: bold; margin-bottom: 9pt;
+  display: flex; align-items: center; gap: 7pt;
+}
+.stage:nth-child(2) .stage-title { color: #55328C; }
+.stage:nth-child(3) .stage-title { color: #2ECC71; }
+.stage-icon {
+  width: 26pt; height: 26pt;
+}
+.stage-desc {
+  color: #2C3E50; font-size: 11pt; margin-bottom: 7pt; line-height: 1.3;
+}
+.review-box {
+  background: #EB1E32; color: #FFFFFF; font-weight: bold; font-size: 10pt;
+  padding: 7pt; border-radius: 4pt; text-align: center; margin-top: 9pt;
+}
+.review-box p {
+  margin: 0; color: #FFFFFF; font-weight: bold; font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>How It Works: Human-in-the-Loop AI</h1>
+  <p class="subtitle">Three-Stage Review Process</p>
+</div>
+<div class="content">
+  <div class="stage">
+    <p class="stage-title">
+      <img src="database-icon.png" class="stage-icon">
+      <span>Stage 1: Research Plan</span>
+    </p>
+    <p class="stage-desc">AI analyzes repository, documentation, existing patterns</p>
+    <p class="stage-desc">Produces research findings</p>
+    <div class="review-box"><p>→ Human reviews and approves/modifies</p></div>
+  </div>
+  <div class="stage">
+    <p class="stage-title">
+      <img src="file-icon.png" class="stage-icon">
+      <span>Stage 2: Implementation Plan</span>
+    </p>
+    <p class="stage-desc">AI creates detailed implementation strategy based on ticket requirements</p>
+    <p class="stage-desc">Outlines approach, files to modify, patterns to follow</p>
+    <div class="review-box"><p>→ Human reviews and approves/modifies</p></div>
+  </div>
+  <div class="stage">
+    <p class="stage-title">
+      <img src="code-icon.png" class="stage-icon">
+      <span>Stage 3: Code Generation</span>
+    </p>
+    <p class="stage-desc">AI generates code following approved plan</p>
+    <p class="stage-desc">Pull request includes trace log of all changes and reasoning</p>
+    <div class="review-box"><p>→ Human reviews PR with full audit trail</p></div>
+  </div>
+</div>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; position: relative;
+}
+.logo {
+  position: absolute; bottom: 15pt; left: 20pt; width: 80pt; height: auto;
+}
+.header {
+  background: #EB1E32; padding: 20pt 40pt; display: flex; align-items: center;
+}
+.header-icon {
+  width: 40pt; height: 40pt; margin-right: 15pt;
+}
+h1 {
+  color: #FFFFFF; font-size: 28pt; font-weight: bold; margin: 0;
+}
+.content {
+  padding: 20pt 40pt 30pt 40pt; flex: 1; display: flex; gap: 20pt;
+}
+.left {
+  flex: 1;
+}
+.right {
+  flex: 0 0 260pt; background: #F8F9FA; border-radius: 8pt; padding: 18pt;
+}
+.subtitle {
+  color: #EB1E32; font-size: 16pt; font-weight: bold; margin-bottom: 12pt;
+}
+.step {
+  display: flex; align-items: flex-start; margin-bottom: 10pt;
+}
+.step-number {
+  background: #55328C; color: #FFFFFF; font-weight: bold; font-size: 13pt;
+  width: 24pt; height: 24pt; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; margin-right: 10pt; flex-shrink: 0;
+}
+.step-number p {
+  margin: 0; color: #FFFFFF; font-weight: bold; font-size: 13pt;
+}
+.step-text {
+  color: #2C3E50; font-size: 12pt; line-height: 1.3; margin: 0; padding-top: 2pt;
+}
+.review { color: #EB1E32; font-weight: bold; }
+.value {
+  background: #B4D2C3; border-radius: 6pt; padding: 12pt; margin-top: 12pt;
+}
+.value-text {
+  color: #2C3E50; font-size: 13pt; font-weight: bold; margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="code-icon.png" class="header-icon">
+  <h1>Use Case: Autonomous Data Model Development</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <p class="subtitle">Workflow</p>
+    <div class="step">
+      <div class="step-number"><p>1</p></div>
+      <p class="step-text">Reads Jira ticket requirements</p>
+    </div>
+    <div class="step">
+      <div class="step-number"><p>2</p></div>
+      <p class="step-text">Analyzes existing DBT models and patterns</p>
+    </div>
+    <div class="step">
+      <div class="step-number"><p>3</p></div>
+      <p class="step-text">Creates research plan → <span class="review">Human reviews</span></p>
+    </div>
+    <div class="step">
+      <div class="step-number"><p>4</p></div>
+      <p class="step-text">Develops implementation plan → <span class="review">Human reviews</span></p>
+    </div>
+    <div class="step">
+      <div class="step-number"><p>5</p></div>
+      <p class="step-text">Generates DBT code → <span class="review">Human reviews PR</span></p>
+    </div>
+    <div class="step">
+      <div class="step-number"><p>6</p></div>
+      <p class="step-text">Debugs failures using logs and context</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="value">
+      <p class="value-text">Reduces model development time from days to hours</p>
+    </div>
+    <p style="color: #2C3E50; font-size: 12pt; margin-top: 15pt; line-height: 1.4;">
+      AI handles the "grunt work" - reading documentation, writing boilerplate, checking standards. Humans control strategy at each decision point.
+    </p>
+  </div>
+</div>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+</body>
+</html>

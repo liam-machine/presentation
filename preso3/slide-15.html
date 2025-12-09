@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; position: relative;
+}
+.logo {
+  position: absolute; bottom: 15pt; left: 20pt; width: 80pt; height: auto;
+}
+.header {
+  background: #EB1E32; padding: 20pt 40pt; display: flex; align-items: center;
+}
+.header-icon {
+  width: 40pt; height: 40pt; margin-right: 15pt;
+}
+h1 {
+  color: #FFFFFF; font-size: 30pt; font-weight: bold; margin: 0;
+}
+.content {
+  padding: 25pt 35pt; flex: 1; display: flex; gap: 25pt;
+}
+.phase {
+  flex: 1; background: #F8F9FA; border-radius: 10pt; padding: 18pt;
+  border-top: 5pt solid #EB1E32;
+}
+.phase:nth-child(2) { border-top-color: #55328C; }
+.phase:nth-child(3) { border-top-color: #89D0DD; }
+.phase:nth-child(4) { border-top-color: #B4D2C3; }
+.phase-title {
+  color: #EB1E32; font-size: 16pt; font-weight: bold; margin-bottom: 8pt;
+}
+.phase:nth-child(2) .phase-title { color: #55328C; }
+.phase:nth-child(3) .phase-title { color: #2C3E50; }
+.phase:nth-child(4) .phase-title { color: #2ECC71; }
+.phase-period {
+  color: #6E6E6E; font-size: 11pt; margin-bottom: 10pt;
+}
+ul {
+  margin: 5pt 0 0 0; padding-left: 18pt;
+}
+li {
+  color: #2C3E50; font-size: 11pt; margin-bottom: 6pt; line-height: 1.3;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="clock-icon.png" class="header-icon">
+  <h1>Proposed Path Forward</h1>
+</div>
+<div class="content">
+  <div class="phase">
+    <p class="phase-title">Phase 1: Approvals</p>
+    <p class="phase-period">Weeks 1-4</p>
+    <ul>
+      <li>Security review and license procurement</li>
+      <li>Network access approval for MCP servers</li>
+      <li>Define acceptable use policies</li>
+    </ul>
+  </div>
+  <div class="phase">
+    <p class="phase-title">Phase 2: Setup</p>
+    <p class="phase-period">Weeks 5-6</p>
+    <ul>
+      <li>Configure MCP servers</li>
+      <li>Team training on agent workflows</li>
+      <li>Establish measurement baselines</li>
+    </ul>
+  </div>
+  <div class="phase">
+    <p class="phase-title">Phase 3: POC Execution</p>
+    <p class="phase-period">Weeks 7-18</p>
+    <ul>
+      <li>Begin with simple use cases</li>
+      <li>Expand complexity as we learn</li>
+      <li>Weekly metric tracking</li>
+    </ul>
+  </div>
+  <div class="phase">
+    <p class="phase-title">Phase 4: Review & Decision</p>
+    <p class="phase-period">Week 19-20</p>
+    <ul>
+      <li>Present findings and recommendations</li>
+      <li>Go/No-Go for broader rollout</li>
+    </ul>
+  </div>
+</div>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+</body>
+</html>

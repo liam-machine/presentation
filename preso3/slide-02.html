@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; position: relative;
+}
+.logo {
+  position: absolute; bottom: 15pt; left: 20pt; width: 80pt; height: auto;
+}
+.header {
+  background: #EB1E32; padding: 20pt 40pt; display: flex; align-items: center;
+}
+.header-icon {
+  width: 40pt; height: 40pt; margin-right: 15pt;
+}
+h1 {
+  color: #FFFFFF; font-size: 32pt; font-weight: bold; margin: 0;
+}
+.content {
+  padding: 25pt 40pt 20pt 40pt; flex: 1;
+}
+.section {
+  margin-bottom: 20pt;
+}
+.section-title {
+  color: #EB1E32; font-size: 18pt; font-weight: bold; margin-bottom: 10pt;
+}
+ul {
+  margin: 10pt 0 0 0; padding-left: 25pt;
+}
+li {
+  color: #2C3E50; font-size: 14pt; margin-bottom: 8pt; line-height: 1.4;
+}
+.positive { color: #2ECC71; font-weight: bold; }
+.negative { color: #E74C3C; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="toolbox-icon.png" class="header-icon">
+  <h1>Where We Are Today</h1>
+</div>
+<div class="content">
+  <div class="section">
+    <p class="section-title">Current AI Toolkit</p>
+    <ul>
+      <li><span class="positive">✓</span> GitHub Copilot access across the organization</li>
+      <li>Useful for code completion and simple suggestions</li>
+    </ul>
+  </div>
+  <div class="section">
+    <p class="section-title">Limitations We're Experiencing</p>
+    <ul>
+      <li><span class="negative">✗</span> Context window truncation in complex projects</li>
+      <li><span class="negative">✗</span> Limited to IDE-based interactions</li>
+      <li><span class="negative">✗</span> Generic solutions that don't understand our tech stack</li>
+      <li><span class="negative">✗</span> No integration with our workflow tools (Jira, DBT, Databricks, etc.)</li>
+    </ul>
+  </div>
+</div>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+</body>
+</html>

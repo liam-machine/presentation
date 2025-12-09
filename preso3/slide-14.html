@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FFFFFF; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; position: relative;
+}
+.logo {
+  position: absolute; bottom: 15pt; left: 20pt; width: 80pt; height: auto;
+}
+.header {
+  background: #55328C; padding: 20pt 40pt; display: flex; align-items: center;
+}
+.header-icon {
+  width: 40pt; height: 40pt; margin-right: 15pt;
+}
+h1 {
+  color: #FFFFFF; font-size: 30pt; font-weight: bold; margin: 0;
+}
+.content {
+  padding: 25pt 40pt; flex: 1; display: flex; gap: 30pt;
+}
+.left {
+  flex: 1;
+}
+.right {
+  flex: 1;
+}
+.section-title {
+  color: #55328C; font-size: 18pt; font-weight: bold; margin-bottom: 12pt;
+}
+ul {
+  margin: 8pt 0 0 0; padding-left: 25pt;
+}
+li {
+  color: #2C3E50; font-size: 13pt; margin-bottom: 8pt; line-height: 1.3;
+}
+.check { color: #2ECC71; font-weight: bold; }
+.decision {
+  background: #B4D2C3; border-radius: 8pt; padding: 15pt; margin-top: 15pt;
+}
+.decision-text {
+  color: #2C3E50; font-size: 14pt; font-weight: bold; margin: 0;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="target-icon.png" class="header-icon">
+  <h1>How We'll Measure Success</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <p class="section-title">3-Month POC Metrics: Quantitative</p>
+    <ul>
+      <li><span class="check">✓</span> Time to complete standard data modeling tasks (% reduction)</li>
+      <li><span class="check">✓</span> Number of models developed per sprint</li>
+      <li><span class="check">✓</span> Code review cycles required (reduced rework)</li>
+      <li><span class="check">✓</span> Documentation completeness scores</li>
+    </ul>
+  </div>
+  <div class="right">
+    <p class="section-title">3-Month POC Metrics: Qualitative</p>
+    <ul>
+      <li><span class="check">✓</span> Engineer satisfaction and perceived productivity</li>
+      <li><span class="check">✓</span> Code quality maintained or improved</li>
+      <li><span class="check">✓</span> Learning curve for team members</li>
+    </ul>
+    <div class="decision">
+      <p class="decision-text">Decision Point: Continue, expand, or stop based on data</p>
+    </div>
+  </div>
+</div>
+<img src="../.claude/skills/pptx-john-holland/assets/John Holland Logo.png" class="logo">
+</body>
+</html>
